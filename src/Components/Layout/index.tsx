@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactElement } from "react"
 import styled from "styled-components"
 import {
   Root,
@@ -47,10 +47,10 @@ schema.configureEdgeSidebar((builder) => {
 })
 
 type LayoutProps = RouteComponentProps & {
-  children: any
+  children: ReactElement
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps): ReactElement => {
   const theme = useTheme()
 
   return (

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactElement } from "react"
 import { Redirect, Router } from "@reach/router"
 import Dashboard from "./Pages/Dashboard"
 import Layout from "./Components/Layout"
@@ -9,7 +9,7 @@ import { zhCN } from '@material-ui/core/locale';
 const theme = createMuiTheme({
 }, zhCN);
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <ThemeProvider theme={theme}>
       <ConfirmProvider>

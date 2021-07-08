@@ -1,5 +1,5 @@
 import React from "react"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
 import { navigate, useLocation } from "@reach/router"
 import ListSubheader from "@material-ui/core/ListSubheader"
 import List from "@material-ui/core/List"
@@ -10,8 +10,9 @@ import Collapse from "@material-ui/core/Collapse"
 import ExpandLess from "@material-ui/icons/ExpandLess"
 import ExpandMore from "@material-ui/icons/ExpandMore"
 import Icon from "@material-ui/core/Icon"
+import { ReactElement } from "react"
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       width: "100%",
@@ -68,8 +69,8 @@ const MenuItem = ({ title, url, children, icon }: MenuItemProps) => {
 
 const Menu = ({ title, items }: MenuProps) => {
   const classes = useStyles()
-  const Subheader: any = title
-    ? () => <ListSubheader component="div">{title}</ListSubheader>
+  const Subheader: ReactElement | undefined = title
+    ? <ListSubheader component="div">{title}</ListSubheader>
     : undefined
 
   return (
@@ -91,7 +92,7 @@ const navs: TreeMenuData = [
   },
 ]
 
-export default function TreeMenu() {
+export default function TreeMenu(): ReactElement {
   return (
     <>
       {navs.map((menu: MenuProps, key) => (
