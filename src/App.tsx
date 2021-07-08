@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import { Redirect, Router } from "@reach/router"
-import Dashboard from "./Pages/Dashboard"
+import FormList from "./Pages/Form/List/List"
 import Layout from "./Components/Layout"
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { ConfirmProvider } from 'material-ui-confirm';
@@ -14,9 +14,9 @@ const App = (): ReactElement => {
     <ThemeProvider theme={theme}>
       <ConfirmProvider>
         <Router>
-          <Redirect from="/" to="/dashboard" noThrow={true}/>
+          <Redirect from="/" to="/form/list" noThrow={true}/>
           <Layout path="/">
-            <Dashboard path="/dashboard" />
+            <FormList path="/form/list" />
           </Layout>
         </Router>
       </ConfirmProvider>

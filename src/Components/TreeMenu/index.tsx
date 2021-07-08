@@ -54,7 +54,9 @@ const MenuItem = ({ title, url, children, icon }: MenuItemProps) => {
         onClick={handleClick}
         selected={url === loaction.pathname}
       >
-        <ListItemIcon><Icon>{icon}</Icon></ListItemIcon>
+        <ListItemIcon>
+          <Icon>{icon}</Icon>
+        </ListItemIcon>
         <ListItemText primary={title} />
         {children && (open ? <ExpandLess /> : <ExpandMore />)}
       </ListItem>
@@ -69,9 +71,9 @@ const MenuItem = ({ title, url, children, icon }: MenuItemProps) => {
 
 const Menu = ({ title, items }: MenuProps) => {
   const classes = useStyles()
-  const Subheader: ReactElement | undefined = title
-    ? <ListSubheader component="div">{title}</ListSubheader>
-    : undefined
+  const Subheader: ReactElement | undefined = title ? (
+    <ListSubheader component="div">{title}</ListSubheader>
+  ) : undefined
 
   return (
     <List component="nav" subheader={Subheader} className={classes.root}>
@@ -87,7 +89,11 @@ const Menu = ({ title, items }: MenuProps) => {
 const navs: TreeMenuData = [
   {
     items: [
-      { title: "管理中心", url: "/dashboard", icon: "home" },
+      {
+        title: "动态表单",
+        icon: "home",
+        children: [{ title: "列表字段", url: "/form/list" }],
+      },
     ],
   },
 ]
