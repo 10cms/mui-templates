@@ -1,7 +1,8 @@
 {
   "name": "admin",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/10cms/mui-templates",
   "dependencies": {
     "@data-driven-forms/mui-component-mapper": "^3.10.0",
     "@data-driven-forms/react-form-renderer": "^3.10.0",
@@ -35,9 +36,12 @@
     "@typescript-eslint/parser": "^4.28.2",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
+    "gh-pages": "^3.2.3",
     "prettier": "2.3.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

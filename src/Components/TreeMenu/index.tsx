@@ -92,7 +92,7 @@ const navs: TreeMenuData = [
       {
         title: "动态表单",
         icon: "home",
-        children: [{ title: "列表字段", url: "/form/list" }],
+        children: [{ title: "列表字段", url: "form/list" }],
       },
     ],
   },
