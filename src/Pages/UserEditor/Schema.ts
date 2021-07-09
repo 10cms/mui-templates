@@ -5,6 +5,7 @@ const schema = {
       name: "name",
       label: "姓名",
       component: 'text-field',
+      variant: "outlined",
       FormFieldGridProps: {
         xs: 4
       }
@@ -13,6 +14,7 @@ const schema = {
       name: "sex",
       label: "性别",
       component: 'text-field',
+      variant: "outlined",
       FormFieldGridProps: {
         xs: 4
       }
@@ -20,42 +22,55 @@ const schema = {
     {
       name: "age",
       label: "年龄",
+      variant: "outlined",
       component: 'text-field',
       FormFieldGridProps: {
         xs: 4
       }
     },
     {
-      "component": "sub-form",
-      "description": "详细资料",
-      "name": "detail",
-      "fields": [
+      component: "sub-form",
+      description: "详细资料",
+      name: "detail",
+      fields: [
         {
-          "name": "jobs",
-          "label": "工作经验",
-          "component": "textarea"
+          name: "jobs",
+          label: "工作经验",
+          variant: "outlined",
+          component: "textarea",
+          style: {
+            marginBottom: "1rem"
+          }
         },
         {
-          "name": "edu",
-          "label": "学习经验",
-          "component": "textarea"
+          name: "edu",
+          label: "学习经验",
+          variant: "outlined",
+          component: "textarea",
+          style: {
+            marginBottom: "1rem"
+          }
         },
         {
-          "name": "intresting",
-          "label": "兴趣爱好",
-          "component": "textarea"
+          name: "intresting",
+          label: "兴趣爱好",
+          variant: "outlined",
+          component: "textarea",
+          style: {
+            marginBottom: "1rem"
+          }
         }
       ]
     },
     {
-      "component": "sub-form",
-      "description": "日程安排",
-      "name": "schedule",
-      "fields": [
+      component: "sub-form",
+      description: "日程安排",
+      name: "schedule",
+      fields: [
         {
-          "name": "learning",
-          "component": "table",
-          "columns": [
+          name: "learning",
+          component: "table",
+          columns: [
             { headerName: "学习安排", field: "name", width: 200, editable: false },
             { headerName: "周一", field: "monday", width: 150 , editable: true },
             { headerName: "周二", field: "tuesday", width: 150 , editable: true },
@@ -67,9 +82,9 @@ const schema = {
           ]
         },
         {
-          "name": "happy",
-          "component": "table",
-          "columns": [
+          name: "happy",
+          component: "table",
+          columns: [
             { headerName: "娱乐安排", field: "name", width: 200, editable: false },
             { headerName: "周一", field: "monday", width: 150 , editable: true },
             { headerName: "周二", field: "tuesday", width: 150 , editable: true },
