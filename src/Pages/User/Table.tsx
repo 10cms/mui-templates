@@ -2,6 +2,7 @@ import * as React from 'react';
 import { DataGrid, GridCellParams, GridColDef } from '@material-ui/data-grid';
 import { ReactNode } from 'react';
 import Button from '@material-ui/core/Button';
+import { ReactElement } from 'react';
 
 const columns: GridColDef[] = [
   {
@@ -52,7 +53,7 @@ const rows = [
   { id: 9, name: 'Roxie', sex:"男", created_at: '2021-10-10', age: 65 },
 ];
 
-export default function DataGridDemo() {
+export default function DataGridDemo(): ReactElement {
   return (
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid

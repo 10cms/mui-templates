@@ -8,6 +8,7 @@ import { zhCN } from '@material-ui/core/locale';
 import base from "./base"
 import Dashboard from "./Pages/Dashboard";
 import User from "./Pages/User/User";
+import UserEditor from "./Pages/UserEditor/UserEditor";
 
 const theme = createMuiTheme({
 }, zhCN);
@@ -22,6 +23,7 @@ const App = (): ReactElement => {
               <Dashboard path={base()} />
               <FormList path={base('form/list')} />
               <User path={base('user')} />
+              <UserEditor path={base('user-editor')} />
             </>
           </Layout>
         </Router>
