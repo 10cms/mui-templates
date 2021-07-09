@@ -96,8 +96,13 @@ const navs: TreeMenuData = [
         url: "",
       },
       {
+        title: "用户管理",
+        icon: "person",
+        url: "user",
+      },
+      {
         title: "动态表单",
-        icon: "home",
+        icon: "listalt",
         children: [{ title: "列表字段", url: "form/list" }],
       },
     ],

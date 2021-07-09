@@ -7,7 +7,6 @@ import Container from "@material-ui/core/Container"
 
 import schema from "./schema"
 
-// eslint-disable-next-line
 const List = (_: RouteComponentProps): ReactElement => {
   return (
     <Container>

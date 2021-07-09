@@ -7,11 +7,10 @@ import { ConfirmProvider } from 'material-ui-confirm';
 import { zhCN } from '@material-ui/core/locale';
 import base from "./base"
 import Dashboard from "./Pages/Dashboard";
+import User from "./Pages/User/User";
 
 const theme = createMuiTheme({
 }, zhCN);
-
-console.log(base("dashboard"))
 
 const App = (): ReactElement => {
   return (
@@ -22,6 +21,7 @@ const App = (): ReactElement => {
             <>
               <Dashboard path={base()} />
               <FormList path={base('form/list')} />
+              <User path={base('user')} />
             </>
           </Layout>
         </Router>
