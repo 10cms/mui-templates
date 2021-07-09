@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mui-templates/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/mui-templates/static/js/main.fada2b5a.chunk.js",
-    "main.js.map": "/mui-templates/static/js/main.fada2b5a.chunk.js.map",
+    "main.js": "/mui-templates/static/js/main.68683db8.chunk.js",
+    "main.js.map": "/mui-templates/static/js/main.68683db8.chunk.js.map",
     "runtime-main.js": "/mui-templates/static/js/runtime-main.c1335b9c.js",
     "runtime-main.js.map": "/mui-templates/static/js/runtime-main.c1335b9c.js.map",
     "static/js/2.d6d56277.chunk.js": "/mui-templates/static/js/2.d6d56277.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c1335b9c.js",
     "static/js/2.d6d56277.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.fada2b5a.chunk.js"
+    "static/js/main.68683db8.chunk.js"
   ]
 }
