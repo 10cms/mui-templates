@@ -12,6 +12,7 @@ import { Toolbar, useTheme } from "@material-ui/core"
 import LayoutBuilder from "@mui-treasury/layout/builders/LayoutBuilder"
 import { RouteComponentProps } from "@reach/router"
 import TreeMenu from "../TreeMenu"
+import Box from "@material-ui/core/Box"
 
 const Header = getHeader(styled)
 const DrawerSidebar = getDrawerSidebar(styled)
@@ -28,7 +29,7 @@ schema.configureHeader((builder) => {
       initialHeight: 56,
     })
     .registerConfig("md", {
-      position: "sticky",
+      position: "fixed",
     })
 })
 
@@ -58,6 +59,9 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
       <Header>
         <Toolbar>
           <SidebarTrigger sidebarId={'primarySidebar'} />
+          <Box textAlign="center" flexGrow={1}>
+            <h1>Material UI Templates</h1>
+          </Box>
         </Toolbar>
       </Header>
       <DrawerSidebar sidebarId={"primarySidebar"}>

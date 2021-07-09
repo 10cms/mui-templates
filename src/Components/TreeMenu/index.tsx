@@ -11,6 +11,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess"
 import ExpandMore from "@material-ui/icons/ExpandMore"
 import Icon from "@material-ui/core/Icon"
 import { ReactElement } from "react"
+import base from "../../base"
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -42,8 +43,8 @@ const MenuItem = ({ title, url, children, icon }: MenuItemProps) => {
   const handleClick = () => {
     if (children) {
       setOpen(!open)
-    } else if (url) {
-      navigate(url)
+    } else if (url !== undefined) {
+      navigate(base(url))
     }
   }
 
@@ -89,6 +90,11 @@ const Menu = ({ title, items }: MenuProps) => {
 const navs: TreeMenuData = [
   {
     items: [
+      {
+        title: "Dashboard",
+        icon: "home",
+        url: "",
+      },
       {
         title: "动态表单",
         icon: "home",

@@ -11,7 +11,7 @@ import schema from "./schema"
 const List = (_: RouteComponentProps): ReactElement => {
   return (
     <Container>
-      <h1>Form - Array Field</h1>
+      <h2>动态表单 - 列表字段</h2>
       <FormRenderer
         schema={schema}
         FormTemplate={(props) => <FormTemplate submitLabel="提交保存" {...props} />}
